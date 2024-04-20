@@ -1,10 +1,5 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
-	let word: string = '';
-
-	function goToWord() {
-		word && goto(`/${word}`);
-	}
+	import SearchBar from './SearchBar.svelte';
 </script>
 
 <h1>Kiokun</h1>
@@ -13,8 +8,7 @@
 
 <p>Search word</p>
 
-<input type="text" bind:value={word} on:keydown={(e) => e.key === 'Enter' && goToWord()} />
-<button on:click={goToWord}>Go</button>
+<SearchBar />
 
 <p>Samples:</p>
 <ul>

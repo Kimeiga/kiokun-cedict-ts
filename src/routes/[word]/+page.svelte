@@ -10,10 +10,15 @@
 	import { isSimplifiedMode } from '$lib/store';
 
 	const isSimplified = isSimplifiedMode();
+
+	import SearchBar from '../SearchBar.svelte';
 </script>
 
 <Toggle />
 
+<div style="margin: 2rem 1rem;">
+	<SearchBar />
+</div>
 <div class="word-head">
 	{#each data.entries as entry}
 		<Ruby {...entry} />

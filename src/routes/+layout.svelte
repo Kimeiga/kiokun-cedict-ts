@@ -10,6 +10,6 @@
 
 <style>
 	main {
-		padding-top: 4rem;
+		/* padding-top: 4rem; */
 	}
 </style>
