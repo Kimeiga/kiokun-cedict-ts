@@ -44,3 +44,7 @@ body {
         grid-auto-columns: 1fr;
     }
 }
+
+a {
+    color: yellow;
+}
