@@ -62,19 +62,4 @@
 	.word-head {
 		display: inline-block;
 	}
-	.components {
-		display: flex;
-	}
-
-	.components {
-		display: grid;
-		grid-auto-flow: column;
-		grid-auto-columns: 1fr;
-	}
-
-	.substrings {
-		display: grid;
-		grid-auto-flow: column;
-		grid-auto-columns: 1fr;
-	}
 </style>

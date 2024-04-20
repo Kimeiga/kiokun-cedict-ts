@@ -6,7 +6,7 @@
 	export let substring: Substring;
 </script>
 
-<div style="padding-left: 1rem">
+<div>
 	<details open>
 		<summary>
 			<div class="word-head">
@@ -18,15 +18,19 @@
 		</summary>
 
 		{#if substring.substrings}
-			{#each substring.substrings as substring}
-				<Substring {substring} />
-			{/each}
+			<div class="substrings">
+				{#each substring.substrings as substring}
+					<Substring {substring} />
+				{/each}
+			</div>
 		{/if}
 
 		{#if substring.components}
-			{#each substring.components as component}
-				<Component {component} />
-			{/each}
+			<div class="components">
+				{#each substring.components as component}
+					<Component {component} />
+				{/each}
+			</div>
 		{/if}
 	</details>
 </div>

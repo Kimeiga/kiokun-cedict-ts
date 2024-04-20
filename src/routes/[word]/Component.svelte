@@ -6,7 +6,7 @@
 	console.log(component);
 </script>
 
-<div style="padding-left: 1rem">
+<div>
 	<details open>
 		<summary>
 			{#if component.entries}

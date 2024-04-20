@@ -277,55 +277,42 @@ function getSubstrings(
 ): any[] {
 	const substrings = [];
 	let startIndex = 0;
-
 	while (startIndex < word.length) {
 		let endIndex = Math.min(word.length, startIndex + originalWord.length - 1);
 		let found = false;
-
 		while (endIndex > startIndex) {
 			const substring = word.slice(startIndex, endIndex);
 
+			if (substring == '病') {
+				debugger;
+			}
 			if (processedSubstrings.has(substring)) {
 				endIndex--;
 				continue;
 			}
-
 			processedSubstrings.add(substring);
-
 			const [entries, _] = getWordFromCedict(substring);
-
 			if (entries) {
 				const data: any = { word: substring, entries };
-
 				if (substring.length === 1) {
 					data.components = getComponents(substring);
 				}
-
 				if (substring.length < originalWord.length) {
 					data.substrings = getSubstrings(substring, originalWord, processedSubstrings);
 				}
-
 				substrings.push(data);
-				startIndex = endIndex;
 				found = true;
 				break;
 			}
-
 			endIndex--;
 		}
-
-		if (!found) {
-			startIndex++;
-		}
+		startIndex++; // Increment startIndex by 1 instead of setting it to endIndex
 	}
-
 	return substrings;
 }
 
 function mapEntries(e, simpWord) {
 	console.log(e, simpWord);
-
-	debugger;
 
 	const entry = e.map(([pinyin, definition, traditional]) => {
 		const base = {

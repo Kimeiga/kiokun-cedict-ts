@@ -28,3 +28,19 @@ body {
     width: 3rem;
     text-align: center;
 }
+
+.components,
+.substrings {
+    container-type: inline-size;
+    container-name: component-container;
+}
+
+@container component-container (min-width: 400px) {
+
+    .components,
+    .substrings {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}

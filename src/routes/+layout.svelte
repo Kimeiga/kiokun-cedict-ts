@@ -7,3 +7,9 @@
 		<slot />
 	</main>
 </div>
+
+<style>
+	main {
+		padding-top: 4rem;
+	}
+</style>
