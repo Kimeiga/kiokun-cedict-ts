@@ -1,0 +1,30 @@
+.tone1 {
+    color: rgb(255, 0, 98)
+}
+
+.tone2 {
+    color: rgb(255, 140, 0)
+}
+
+.tone3 {
+    color: rgb(251, 255, 0)
+}
+
+.tone4 {
+    color: rgb(8, 221, 40)
+}
+
+.tone5 {
+    color: rgb(8, 221, 193)
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+.fullwidth {
+    display: inline-block;
+    width: 3rem;
+    text-align: center;
+}
