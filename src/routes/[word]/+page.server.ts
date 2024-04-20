@@ -269,6 +269,7 @@ function getComponents(character) {
 
 	return results;
 }
+
 function getSubstrings(
 	word: string,
 	originalWord: string = word,

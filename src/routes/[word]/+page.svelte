@@ -22,15 +22,19 @@
 	{/each}
 </div>
 
-{#each data.substrings as substring}
-	<Substring {substring} />
+<div class="substrings">
+	{#each data.substrings as substring}
+		<Substring {substring} />
 
-	{#if substring.components}
-		{#each substring.components as component}
-			<Component {component} />
-		{/each}
-	{/if}
-{/each}
+		{#if substring.components}
+			<div class="components">
+				{#each substring.components as component}
+					<Component {component} />
+				{/each}
+			</div>
+		{/if}
+	{/each}
+</div>
 
 <!-- <h1>{data.word}{data.entries[0][2] ? ` / ${data.entries[0][2]}` : '' }</h1>
 <h1><ruby>
@@ -57,5 +61,20 @@
 <style>
 	.word-head {
 		display: inline-block;
+	}
+	.components {
+		display: flex;
+	}
+
+	.components {
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+	}
+
+	.substrings {
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
 	}
 </style>
